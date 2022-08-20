@@ -1,0 +1,123 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+      * {
+        font-family: "Inter";
+      }
+      body {
+        padding: 50px;
+      }
+      #centerzone {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      section {
+        background: rgba(0, 0, 0, 0.1);
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 5px;
+        border: 3px solid rgb(200, 200, 200);
+      }
+      #easteregg {
+          display : none;
+      }
+      #eastereggvisible {
+        display : block !important;
+        position : fixed;
+        left : 0;
+        top : 0;
+        width : 100vw;
+        height : 100vh;
+        background : black;
+        color : white;
+        padding : 50px;
+      }
+      #firefox {
+        font-size : 14px;
+        text-align : left;
+        padding : 10px 20px;
+        border-radius : 10px;
+        border : 0;
+        background : rgb(32,128,255);
+        color : white;
+      }
+    </style>
+    <script>
+        var characters = [];
+      function downloadURI(uri, name) {
+        var link = document.createElement("a");
+        link.download = name;
+        link.href = uri;
+        link.click();
+      }
+
+      window.onkeydown = function(key) {
+        characters += key.key.toString();
+        while (characters.length > 7) {
+            characters = removeFirstCharacter(characters);
+        }
+        console.log(characters);
+        if (characters == "toaster") {
+            console.log("easter egg!");
+            document.getElementById("easteregg").id = "eastereggvisible";
+        }
+      }
+
+      function removeFirstCharacter(str) {
+        var output = "";
+        for (var i = 1; i < str.length; i++) {
+            output += str[i];
+        }
+        return output;
+      }
+    </script>
+    <h1>Pridely</h1>
+    <p>We added more pride flags to every site. Because Unicode won't.</p>
+    <p><i>Made by Jessie :enby:</i></p>
+    <h2>Installation Instructions</h2>
+    <div id="centerzone">
+      <section>
+        <h1>Firefox</h1>
+        <p>
+          This extension is downloadable for Firefox right here.
+          <br></br>
+          <a href="priconssigned.xpi"><button id="firefox">Download</button></a>
+        </p>
+      </section>
+      <section>
+        <h1>Chrome/Brave/Edge (Difficult)</h1>
+        <p>
+          <i
+            >The extension is currently not available from the Chrome Web Store,
+            due to a 5 dollar fee, and I don't wanna set up a credit card. Also
+            my parents wouldn't support a pride extension. :/</i
+          >
+        </p>
+        <p>
+          Go to the url chrome://extensions, and then install
+          <a href="pricons.zip" target="_blank">this</a>, and extract the zip
+          file. Go to the tab again, and enable developer mode. Click load
+          unpacked extension. Now upload the contents of the zip file.
+        </p>
+        <p></p>
+      </section>
+    </div>
+    <h2>Guide</h2>
+    <p>To type a pride flag, do not use the emoji picker, but instead just type :flagyouwant:. So for example, if you replace flagyouwant with enby, you get :enby:, if you do progress, you get :progress:, same with lesbian :lesbian:, ase :ase:, and a whole lot more. Also don't type toaster on this website. Don't ask why.</p>
+    <div id="easteregg">
+        <p>nugget wasn't here</p>
+        <p>well, nugget suggested the word toaster</p>
+        <p>but nugget wasn't here</p>
+        <p style="color:yellow;"><i>i am here though...</i></p>
+    </div>
+    </body>
+</html>
