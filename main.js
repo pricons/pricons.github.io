@@ -12,6 +12,7 @@
 
 
 window.onload = () => {
+    console.log("pricons is running on this page!");
     setInterval(tick, 0);
     window.pricons = {
         version: "v1.0",
