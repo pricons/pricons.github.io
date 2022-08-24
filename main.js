@@ -79,6 +79,7 @@ window.pricons = {
             trans: "https://www.prideflags.org/static/search/data/img/transgender_pride_flag.svg",
             isrealtrans: "https://www.prideflags.org/static/search/data/img/transgender_pride_flag_israel.svg",
             transpride: "https://www.prideflags.org/static/search/data/img/transgender_pride_flag_jennifer.svg",
+            panfurry: "https://pricons.github.io/panfurry.svg"
         }
     }
 }
