@@ -97,7 +97,7 @@ function tick() {
                 for (var name in pricons.internal.icons) {
                     if (!nodes[i].querySelector("script") && !isContentEditable(nodes[i])) {
                         if (nodes[i].innerHTML.includes(":" + name + ":")) {
-                            nodes[i].innerHTML = nodes[i].innerHTML.split(":" + name + ":").join("<img src='" + pricons.internal.icons[name] + "' style='height:1em;transform:translateY(10%);border-radius:5px;'>");
+                            nodes[i].innerHTML = nodes[i].innerHTML.split(":" + name + ":").join("<img src='" + pricons.internal.icons[name] + "' style='height:1.05em;transform:translateY(18%);border-radius:4px;'>");
                         }
                     }
                 }
