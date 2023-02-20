@@ -118,7 +118,11 @@ function isContentEditable(node) {
 
 function fixElement(node, name) {
     if (node.data.includes(':' + name + ':')) {
-        console.log(node.data);
         node.data = node.data.split(':' + name + ':').join(`<img src="${prideFlags[name]}" style="height:1em;border-radius:1px;">`);
-    }
+		if (localStorage.hasShownTrevorProjectMessage != "yes") {
+			console.log("showing ad");
+			localStorage.hasShownTrevorProjectMessage = "yes";
+			alert("Hey there! If you're running my extension, that means you problably care about LGBTQIA+ people. Unfortunately, homophobia and transphobia has caused increasing depression rates, which lead people to suicide. Please, if you have the money, consider donating to the Trevor Project at https://www.thetrevorproject.org/, to help decrease LGBTQIA+ suicides\n\nThanks, Jessie (creator of pricons)")
+		}
+	}
 }
