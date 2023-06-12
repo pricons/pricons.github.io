@@ -36,6 +36,7 @@ window.pricons = {
             agender9: "https://www.prideflags.org/static/search/data/img/agender_pride_flag_9_stripe.svg",
             agenderDotInfo: "https://www.prideflags.org/static/search/data/img/agender_pride_flag_agender_info.svg",
             aromantic: "https://www.prideflags.org/static/search/data/img/aromantic_pride_flag.svg",
+            ace: "https://www.prideflags.org/static/search/data/img/asexual_pride_flag.svg",
             ase: "https://www.prideflags.org/static/search/data/img/asexual_pride_flag.svg",
             bear: "https://www.prideflags.org/static/search/data/img/bear_pride_flag.svg",
             bigender: "https://www.prideflags.org/static/search/data/img/bigender_pride_flag.svg",
