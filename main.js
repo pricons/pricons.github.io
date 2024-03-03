@@ -99,14 +99,7 @@ function tick() {
                     if (!nodes[i].querySelector("script") && !isContentEditable(nodes[i])) {
                         if (nodes[i].innerHTML.includes(":" + name + ":")) {
                             nodes[i].innerHTML = nodes[i].innerHTML.split(":" + name + ":").join("<img src='" + pricons.internal.icons[name] + "' style='height:1.15em;transform:translateY(16%);border-radius:4px;'>");
-							if (localStorage) {
-								if (localStorage.hasShownTrevorProjectMessage != "yes") {
-									console.log("showing ad");
-									localStorage.hasShownTrevorProjectMessage = "yes";
-									alert("Hey there! If you're running my extension, that means you problably care about LGBTQIA+ people. Unfortunately, homophobia and transphobia has caused increasing depression rates, which lead people to suicide. Please, if you have the money, consider donating to the Trevor Project at https://www.thetrevorproject.org/, to help decrease LGBTQIA+ suicides\n\nThanks, Jessie (creator of pricons)")
-								}
-							}
-						}
+			}
                     }
                 }
             }
@@ -127,10 +120,5 @@ function isContentEditable(node) {
 function fixElement(node, name) {
     if (node.data.includes(':' + name + ':')) {
         node.data = node.data.split(':' + name + ':').join(`<img src="${prideFlags[name]}" style="height:1em;border-radius:1px;">`);
-		/*if (localStorage.hasShownTrevorProjectMessage != "yes") {
-			console.log("showing ad");
-			localStorage.hasShownTrevorProjectMessage = "yes";
-			alert("Hey there! If you're running my extension, that means you problably care about LGBTQIA+ people. Unfortunately, homophobia and transphobia has caused increasing depression rates, which lead people to suicide. Please, if you have the money, consider donating to the Trevor Project at https://www.thetrevorproject.org/, to help decrease LGBTQIA+ suicides\n\nThanks, Jessie (creator of pricons)")
-		}*/
 	}
 }
