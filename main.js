@@ -8,11 +8,33 @@
 //  pride flags to all sites, because
 //  unicode won't.
 
-//  powered by bad dumb code
-
-
 console.log("pricons is running on this page!");
-setInterval(tick, 0);
+
+var observeDOM = (function(){ // quick fix because im lazy and wont do this myself: https://stackoverflow.com/questions/3219758/detect-changes-in-the-dom
+  var MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+
+  return function( obj, callback ){
+    if( !obj || obj.nodeType !== 1 ) return; 
+
+    if( MutationObserver ){
+      // define a new observer
+      var mutationObserver = new MutationObserver(callback)
+
+      // have the observer observe for changes in children
+      mutationObserver.observe( obj, { childList:true, subtree:true })
+      return mutationObserver
+    }
+    
+    // browser support fallback
+    else if( window.addEventListener ){
+      obj.addEventListener('DOMNodeInserted', callback, false)
+      obj.addEventListener('DOMNodeRemoved', callback, false)
+    }
+  }
+})();
+
+observeDom(document.body, tick);
+
 window.pricons = {
     version: "v1.0",
     api: [
